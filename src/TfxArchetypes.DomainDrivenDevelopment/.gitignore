@@ -1,0 +1,14 @@
+*.aps
+*.eto
+*.log
+*.nupkg
+*.user
+[Bb]in
+[Dd]ebug
+[Dd]ynamic
+[Ll]ogs
+[Oo]bj
+[Rr]elease
+_Pvt_Extensions
+ClientBin
+GeneratedArtifacts

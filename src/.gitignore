@@ -1,0 +1,14 @@
+# Visual Studio user files
+*.suo
+*.user
+*/*.user
+.vs
+[Bb]in/
+[Oo]bj/
+
+# Nuget
+*.nupkg
+packages
+
+# NTest
+TestResults
