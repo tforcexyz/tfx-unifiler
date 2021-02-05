@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>Xyz.TForce.UniFilOps.Domain.Contracts</RootNamespace>
+    <RootNamespace>Xyz.TForce.TfxUnifiler.Domain.Logic</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
     <Copyright>T-Force Xyz</Copyright>

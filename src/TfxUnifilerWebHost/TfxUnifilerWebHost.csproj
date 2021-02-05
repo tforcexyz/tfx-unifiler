@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Xyz.TForce.UniFilOps</RootNamespace>
+    <RootNamespace>Xyz.TForce.TfxUnifiler</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
     <Copyright>T-Force Xyz</Copyright>
@@ -25,10 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TfxUniFilOps.Application.Logic\TfxUniFilOps.Application.Logic.csproj" />
-    <ProjectReference Include="..\TfxUniFilOps.Data.Repositories\TfxUniFilOps.Data.Repositories.csproj" />
-    <ProjectReference Include="..\TfxUniFilOps.WebApi\TfxUniFilOps.WebApi.csproj" />
-    <ProjectReference Include="..\TfxUniFilOps.WebMvc\TfxUniFilOps.WebMvc.csproj" />
+    <ProjectReference Include="..\TfxUnifiler.Application.Logic\TfxUnifiler.Application.Logic.csproj" />
+    <ProjectReference Include="..\TfxUnifiler.Data.Repositories\TfxUnifiler.Data.Repositories.csproj" />
+    <ProjectReference Include="..\TfxUnifiler.WebApi\TfxUnifiler.WebApi.csproj" />
+    <ProjectReference Include="..\TfxUnifiler.WebMvc\TfxUnifiler.WebMvc.csproj" />
   </ItemGroup>
 
 </Project>

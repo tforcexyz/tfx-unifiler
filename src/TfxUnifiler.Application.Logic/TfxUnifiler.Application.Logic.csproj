@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>Xyz.TForce.UniFilOps.Application.Contracts</RootNamespace>
+    <RootNamespace>Xyz.TForce.TfxUnifiler.Application.Logic</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
     <Copyright>T-Force Xyz</Copyright>
@@ -14,11 +14,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Tfx" Version="1.0.0" />
+    <PackageReference Include="TfxDependencyInjection" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TfxUniFilOps.Domain\TfxUniFilOps.Domain.csproj" />
+    <ProjectReference Include="..\TfxUnifiler.Application.Contracts\TfxUnifiler.Application.Contracts.csproj" />
+    <ProjectReference Include="..\TfxUnifiler.Data.Contracts\TfxUnifiler.Data.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

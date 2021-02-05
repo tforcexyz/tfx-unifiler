@@ -3,35 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUniFilOpsWebHost", "TfxUniFilOpsWebHost\TfxUniFilOpsWebHost.csproj", "{91170D17-4CCE-4F11-8055-D107AC54D935}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUnifilerWebHost", "TfxUnifilerWebHost\TfxUnifilerWebHost.csproj", "{91170D17-4CCE-4F11-8055-D107AC54D935}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxArchetypes.DomainDrivenDevelopment", "TfxArchetypes.DomainDrivenDevelopment\TfxArchetypes.DomainDrivenDevelopment.csproj", "{5E0E5C21-3C79-4DBA-ADCD-32D8E42B94AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxData.EntityFrameworkAdapter", "TfxData.EntityFrameworkAdapter\TfxData.EntityFrameworkAdapter.csproj", "{FE67BC2F-ED04-4D28-83C7-74BAF8C33DF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUniFilOps.CrossCutting", "TfxUniFilOps.CrossCutting\TfxUniFilOps.CrossCutting.csproj", "{AB6D2ECB-3B98-4B35-99EF-2FA493511E76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUnifiler.CrossCutting", "TfxUnifiler.CrossCutting\TfxUnifiler.CrossCutting.csproj", "{AB6D2ECB-3B98-4B35-99EF-2FA493511E76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUniFilOps.Domain", "TfxUniFilOps.Domain\TfxUniFilOps.Domain.csproj", "{C76194DD-FD9D-4B6D-9411-4A01FC35D847}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUnifiler.Domain", "TfxUnifiler.Domain\TfxUnifiler.Domain.csproj", "{C76194DD-FD9D-4B6D-9411-4A01FC35D847}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUniFilOps.Domain.Contracts", "TfxUniFilOps.Domain.Contracts\TfxUniFilOps.Domain.Contracts.csproj", "{D791FA07-1CF4-44B9-AC3B-05DCEC9091FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUnifiler.Domain.Contracts", "TfxUnifiler.Domain.Contracts\TfxUnifiler.Domain.Contracts.csproj", "{D791FA07-1CF4-44B9-AC3B-05DCEC9091FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUniFilOps.Domain.Logic", "TfxUniFilOps.Domain.Logic\TfxUniFilOps.Domain.Logic.csproj", "{875418F2-2451-4478-A678-9EB53849F4C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUnifiler.Domain.Logic", "TfxUnifiler.Domain.Logic\TfxUnifiler.Domain.Logic.csproj", "{875418F2-2451-4478-A678-9EB53849F4C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUniFilOps.Application.Contracts", "TfxUniFilOps.Application.Contracts\TfxUniFilOps.Application.Contracts.csproj", "{58E8A4EB-701E-418C-8D20-EF556B205F7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUnifiler.Application.Contracts", "TfxUnifiler.Application.Contracts\TfxUnifiler.Application.Contracts.csproj", "{58E8A4EB-701E-418C-8D20-EF556B205F7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUniFilOps.Application.Logic", "TfxUniFilOps.Application.Logic\TfxUniFilOps.Application.Logic.csproj", "{6559DF4F-EA93-4C1A-91F4-A1B82B28661C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUnifiler.Application.Logic", "TfxUnifiler.Application.Logic\TfxUnifiler.Application.Logic.csproj", "{6559DF4F-EA93-4C1A-91F4-A1B82B28661C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUniFilOps.Data.Contracts", "TfxUniFilOps.Data.Contracts\TfxUniFilOps.Data.Contracts.csproj", "{8646A78A-9256-4094-A751-175E4CFE8C2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUnifiler.Data.Contracts", "TfxUnifiler.Data.Contracts\TfxUnifiler.Data.Contracts.csproj", "{8646A78A-9256-4094-A751-175E4CFE8C2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUniFilOps.EventHandlers", "TfxUniFilOps.EventHandlers\TfxUniFilOps.EventHandlers.csproj", "{89518B5A-75E8-4BDB-82B6-5E8BF6A4C804}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUnifiler.EventHandlers", "TfxUnifiler.EventHandlers\TfxUnifiler.EventHandlers.csproj", "{89518B5A-75E8-4BDB-82B6-5E8BF6A4C804}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUniFilOps.Data.Repositories", "TfxUniFilOps.Data.Repositories\TfxUniFilOps.Data.Repositories.csproj", "{CB810894-18C3-4546-9FA1-4EB220F905B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUnifiler.Data.Repositories", "TfxUnifiler.Data.Repositories\TfxUnifiler.Data.Repositories.csproj", "{CB810894-18C3-4546-9FA1-4EB220F905B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUniFilOps.Data.Migrations", "TfxUniFilOps.Data.Migrations\TfxUniFilOps.Data.Migrations.csproj", "{4616E5BD-B01F-4F46-AA25-D14D3AB31792}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUnifiler.Data.Migrations", "TfxUnifiler.Data.Migrations\TfxUnifiler.Data.Migrations.csproj", "{4616E5BD-B01F-4F46-AA25-D14D3AB31792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUniFilOps.WebApi", "TfxUniFilOps.WebApi\TfxUniFilOps.WebApi.csproj", "{8287320C-A273-4FE8-99B3-F21B9F9457B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUnifiler.WebApi", "TfxUnifiler.WebApi\TfxUnifiler.WebApi.csproj", "{8287320C-A273-4FE8-99B3-F21B9F9457B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUniFilOps.WebMvc", "TfxUniFilOps.WebMvc\TfxUniFilOps.WebMvc.csproj", "{FC30E3C4-CAAB-4950-8D8E-48D39231B7D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxUnifiler.WebMvc", "TfxUnifiler.WebMvc\TfxUnifiler.WebMvc.csproj", "{FC30E3C4-CAAB-4950-8D8E-48D39231B7D3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-SharedComponents", "0-SharedComponents", "{06AE2F7A-9FC1-4502-82F6-88FEEBD4D281}"
 EndProject

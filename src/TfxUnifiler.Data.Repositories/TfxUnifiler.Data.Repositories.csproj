@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>Xyz.TForce.UniFilOps.Data.Repositories</RootNamespace>
+    <RootNamespace>Xyz.TForce.TfxUnifiler.Data.Repositories</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
     <Copyright>T-Force Xyz</Copyright>
@@ -24,8 +24,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TfxData.EntityFrameworkAdapter\TfxData.EntityFrameworkAdapter.csproj" />
-    <ProjectReference Include="..\TfxUniFilOps.Data.Contracts\TfxUniFilOps.Data.Contracts.csproj" />
-    <ProjectReference Include="..\TfxUniFilOps.Domain\TfxUniFilOps.Domain.csproj" />
+    <ProjectReference Include="..\TfxUnifiler.Data.Contracts\TfxUnifiler.Data.Contracts.csproj" />
+    <ProjectReference Include="..\TfxUnifiler.Domain\TfxUnifiler.Domain.csproj" />
   </ItemGroup>
 
 </Project>

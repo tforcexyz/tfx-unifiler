@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Xyz.TForce.UniFilOps.Data.Migrations</RootNamespace>
+    <RootNamespace>Xyz.TForce.TfxUnifiler.Data.Migrations</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
     <Copyright>T-Force Xyz</Copyright>
@@ -27,7 +27,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\TfxUniFilOps.Data.Repositories\TfxUniFilOps.Data.Repositories.csproj" />
+    <ProjectReference Include="..\TfxUnifiler.Data.Repositories\TfxUnifiler.Data.Repositories.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>Xyz.TForce.UniFilOps.Data.Contracts</RootNamespace>
+    <RootNamespace>Xyz.TForce.TfxUnifiler.CrossCutting</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
     <Copyright>T-Force Xyz</Copyright>
@@ -12,14 +12,5 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="IdentityServer4.Storage" Version="4.1.1" />
-    <PackageReference Include="Tfx" Version="1.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\TfxUniFilOps.Domain\TfxUniFilOps.Domain.csproj" />
-  </ItemGroup>
 
 </Project>
