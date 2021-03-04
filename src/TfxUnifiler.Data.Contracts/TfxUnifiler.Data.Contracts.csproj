@@ -14,7 +14,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IdentityServer4.Storage" Version="4.1.1" />
     <PackageReference Include="Tfx" Version="1.0.0" />
   </ItemGroup>
 
