@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net452;netstandard2.0;netstandard2.1</TargetFrameworks>
     <RootNamespace>Xyz.TForce.Archetypes.DomainDrivenDevelopment</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
@@ -26,7 +26,7 @@
     <AssemblyOriginatorKeyFile>$(StrongNameKeyFilePath)</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net452'">
     <PackageReference Include="FluentValidation" Version="8.6.3" />
     <PackageReference Include="MediatR" Version="5.1.0" />
     <PackageReference Include="Tfx" Version="1.0.0" />
@@ -35,6 +35,12 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="FluentValidation" Version="9.3.0" />
     <PackageReference Include="MediatR" Version="8.1.0" />
+    <PackageReference Include="Tfx" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+    <PackageReference Include="FluentValidation" Version="10.3.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
     <PackageReference Include="Tfx" Version="1.0.0" />
   </ItemGroup>
   

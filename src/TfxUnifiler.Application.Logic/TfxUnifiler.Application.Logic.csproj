@@ -14,10 +14,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="TfxDependencyInjection" Version="1.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\TfxUnifiler.Application.Contracts\TfxUnifiler.Application.Contracts.csproj" />
     <ProjectReference Include="..\TfxUnifiler.Data.Contracts\TfxUnifiler.Data.Contracts.csproj" />
   </ItemGroup>

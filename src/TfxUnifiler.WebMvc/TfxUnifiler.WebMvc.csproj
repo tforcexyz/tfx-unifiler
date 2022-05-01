@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>Xyz.TForce.TfxUnifiler.WebMvc</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
@@ -18,9 +18,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="4.9.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageReference Include="TfxAspNet" Version="1.0.0" />
+    <PackageReference Include="Autofac" Version="6.2.0" />
   </ItemGroup>
 
 </Project>
