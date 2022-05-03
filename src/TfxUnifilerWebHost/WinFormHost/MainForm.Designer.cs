@@ -1,5 +1,5 @@
-﻿
-namespace Xyz.TForce.TfxUnifiler
+
+namespace Xyz.TForce.TfxUnifiler.WinFormHost
 {
   partial class MainForm
   {
