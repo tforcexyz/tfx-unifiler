@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Xyz.TForce.TfxUnifiler.Data.Migrations</RootNamespace>
+    <RootNamespace>Xyz.TForce.Unifiler.Data.Migrations</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
     <Copyright>T-Force Xyz</Copyright>
@@ -25,7 +25,7 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.10" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.4" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <ProjectReference Include="..\TfxUnifiler.Data.Repositories\TfxUnifiler.Data.Repositories.csproj" />
   </ItemGroup>

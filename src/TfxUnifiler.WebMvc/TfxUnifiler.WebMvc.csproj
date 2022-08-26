@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Xyz.TForce.TfxUnifiler.WebMvc</RootNamespace>
+    <RootNamespace>Xyz.TForce.Unifiler.WebMvc</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
     <Copyright>T-Force Xyz</Copyright>
@@ -16,9 +16,13 @@
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TfxUnifiler.Application\TfxUnifiler.Application.csproj" />
   </ItemGroup>
 
 </Project>

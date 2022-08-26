@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>Xyz.TForce.TfxUnifiler.Data.Repositories</RootNamespace>
+    <RootNamespace>Xyz.TForce.Unifiler.Data.Repositories</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
     <Copyright>T-Force Xyz</Copyright>
@@ -20,8 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TfxData.EntityFrameworkAdapter\TfxData.EntityFrameworkAdapter.csproj" />
-    <ProjectReference Include="..\TfxUnifiler.Data.Contracts\TfxUnifiler.Data.Contracts.csproj" />
-    <ProjectReference Include="..\TfxUnifiler.Domain\TfxUnifiler.Domain.csproj" />
+    <ProjectReference Include="..\TfxUnifiler.Data\TfxUnifiler.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>Xyz.TForce.TfxUnifiler.Application.Logic</RootNamespace>
+    <RootNamespace>Xyz.TForce.Unifiler.Application.Logic</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
     <Copyright>T-Force Xyz</Copyright>
@@ -14,8 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TfxUnifiler.Application.Contracts\TfxUnifiler.Application.Contracts.csproj" />
-    <ProjectReference Include="..\TfxUnifiler.Data.Contracts\TfxUnifiler.Data.Contracts.csproj" />
+    <ProjectReference Include="..\TfxUnifiler.Application\TfxUnifiler.Application.csproj" />
   </ItemGroup>
 
 </Project>

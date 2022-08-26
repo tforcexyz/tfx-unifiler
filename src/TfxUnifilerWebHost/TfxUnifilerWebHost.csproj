@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <RootNamespace>Xyz.TForce.TfxUnifiler</RootNamespace>
+    <RootNamespace>Xyz.TForce.Unifiler</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
     <Copyright>T-Force Xyz</Copyright>

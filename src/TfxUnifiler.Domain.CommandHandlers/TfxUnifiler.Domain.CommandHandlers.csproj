@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>Xyz.TForce.TfxUnifiler.Data.Contracts</RootNamespace>
+    <RootNamespace>Xyz.TForce.Unifiler.Domain.CommandHandlers</RootNamespace>
     <Authors>T-Force Xyz</Authors>
     <Company>T-Force Xyz</Company>
     <Copyright>T-Force Xyz</Copyright>
@@ -12,10 +12,6 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Tfx" Version="1.0.0" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TfxUnifiler.Domain\TfxUnifiler.Domain.csproj" />
