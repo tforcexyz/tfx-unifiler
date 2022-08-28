@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Xyz.TForce.Cryptography;
 
-namespace Xyz.TForce.TfxUnifiler.AspNetHost
+namespace Xyz.TForce.Unifiler.AspNetHost
 {
 
   public delegate void WebHostStarted(WebHostStartedEventArgs args);

@@ -1,4 +1,4 @@
-namespace Xyz.TForce.TfxUnifiler
+namespace Xyz.TForce.Unifiler
 {
 
   public static class MainModule

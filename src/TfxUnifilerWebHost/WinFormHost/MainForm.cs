@@ -1,7 +1,7 @@
 using System.Windows.Forms;
-using Xyz.TForce.TfxUnifiler.AspNetHost;
+using Xyz.TForce.Unifiler.AspNetHost;
 
-namespace Xyz.TForce.TfxUnifiler.WinFormHost
+namespace Xyz.TForce.Unifiler.WinFormHost
 {
 
   public partial class MainForm : Form
