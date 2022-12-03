@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TfxUnifilerConsole", "TfxUnifilerConsole\TfxUnifilerConsole.csproj", "{76E1B1F8-6B9B-420D-A528-32CA23241ED9}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TfxUnifilerWebHost", "TfxUnifilerWebHost\TfxUnifilerWebHost.csproj", "{91170D17-4CCE-4F11-8055-D107AC54D935}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TfxArchetypes.DomainDrivenDevelopment", "TfxArchetypes.DomainDrivenDevelopment\TfxArchetypes.DomainDrivenDevelopment.csproj", "{5E0E5C21-3C79-4DBA-ADCD-32D8E42B94AB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TfxData.EntityFrameworkAdapter", "TfxData.EntityFrameworkAdapter\TfxData.EntityFrameworkAdapter.csproj", "{FE67BC2F-ED04-4D28-83C7-74BAF8C33DF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfxInOut.FileSystem", "TfxInOut.FileSystem\TfxInOut.FileSystem.csproj", "{27DF22CA-6052-4054-81BC-5E5A197D82D9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TfxUnifiler.CrossCutting", "TfxUnifiler.CrossCutting\TfxUnifiler.CrossCutting.csproj", "{AB6D2ECB-3B98-4B35-99EF-2FA493511E76}"
 EndProject
@@ -24,6 +28,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TfxUnifiler.Application", "TfxUnifiler.Application\TfxUnifiler.Application.csproj", "{58E8A4EB-701E-418C-8D20-EF556B205F7D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TfxUnifiler.Application.Logic", "TfxUnifiler.Application.Logic\TfxUnifiler.Application.Logic.csproj", "{6559DF4F-EA93-4C1A-91F4-A1B82B28661C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TfxUnifiler.Application.Background", "TfxUnifiler.Application.Background\TfxUnifiler.Application.Background.csproj", "{E3C0B38E-818D-415B-B96D-C2646C8F3F49}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TfxUnifiler.Data.Repositories", "TfxUnifiler.Data.Repositories\TfxUnifiler.Data.Repositories.csproj", "{CB810894-18C3-4546-9FA1-4EB220F905B8}"
 EndProject
@@ -43,12 +49,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Infrastructures", "3-Infr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-UserInterfaces", "4-UserInterfaces", "{832A092C-4AF3-48E4-BD4B-4FF7D1F9713D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TfxUnifiler.Interop.ExternalExecutables", "TfxUnifiler.Interop.ExternalExecutables\TfxUnifiler.Interop.ExternalExecutables.csproj", "{7AA03C85-111E-481A-AEE3-9D6877E9167B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76E1B1F8-6B9B-420D-A528-32CA23241ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E1B1F8-6B9B-420D-A528-32CA23241ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E1B1F8-6B9B-420D-A528-32CA23241ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E1B1F8-6B9B-420D-A528-32CA23241ED9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{91170D17-4CCE-4F11-8055-D107AC54D935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{91170D17-4CCE-4F11-8055-D107AC54D935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91170D17-4CCE-4F11-8055-D107AC54D935}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -61,6 +73,10 @@ Global
 		{FE67BC2F-ED04-4D28-83C7-74BAF8C33DF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE67BC2F-ED04-4D28-83C7-74BAF8C33DF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE67BC2F-ED04-4D28-83C7-74BAF8C33DF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27DF22CA-6052-4054-81BC-5E5A197D82D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27DF22CA-6052-4054-81BC-5E5A197D82D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27DF22CA-6052-4054-81BC-5E5A197D82D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27DF22CA-6052-4054-81BC-5E5A197D82D9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AB6D2ECB-3B98-4B35-99EF-2FA493511E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AB6D2ECB-3B98-4B35-99EF-2FA493511E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB6D2ECB-3B98-4B35-99EF-2FA493511E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -93,6 +109,10 @@ Global
 		{6559DF4F-EA93-4C1A-91F4-A1B82B28661C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6559DF4F-EA93-4C1A-91F4-A1B82B28661C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6559DF4F-EA93-4C1A-91F4-A1B82B28661C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3C0B38E-818D-415B-B96D-C2646C8F3F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3C0B38E-818D-415B-B96D-C2646C8F3F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3C0B38E-818D-415B-B96D-C2646C8F3F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3C0B38E-818D-415B-B96D-C2646C8F3F49}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CB810894-18C3-4546-9FA1-4EB220F905B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CB810894-18C3-4546-9FA1-4EB220F905B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB810894-18C3-4546-9FA1-4EB220F905B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -109,6 +129,10 @@ Global
 		{FC30E3C4-CAAB-4950-8D8E-48D39231B7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC30E3C4-CAAB-4950-8D8E-48D39231B7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC30E3C4-CAAB-4950-8D8E-48D39231B7D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AA03C85-111E-481A-AEE3-9D6877E9167B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AA03C85-111E-481A-AEE3-9D6877E9167B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AA03C85-111E-481A-AEE3-9D6877E9167B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AA03C85-111E-481A-AEE3-9D6877E9167B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +140,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5E0E5C21-3C79-4DBA-ADCD-32D8E42B94AB} = {06AE2F7A-9FC1-4502-82F6-88FEEBD4D281}
 		{FE67BC2F-ED04-4D28-83C7-74BAF8C33DF0} = {06AE2F7A-9FC1-4502-82F6-88FEEBD4D281}
+		{27DF22CA-6052-4054-81BC-5E5A197D82D9} = {06AE2F7A-9FC1-4502-82F6-88FEEBD4D281}
 		{AB6D2ECB-3B98-4B35-99EF-2FA493511E76} = {06AE2F7A-9FC1-4502-82F6-88FEEBD4D281}
 		{C76194DD-FD9D-4B6D-9411-4A01FC35D847} = {544959C5-E349-4E28-A816-D72978273E67}
 		{875418F2-2451-4478-A678-9EB53849F4C4} = {544959C5-E349-4E28-A816-D72978273E67}
@@ -124,10 +149,12 @@ Global
 		{8646A78A-9256-4094-A751-175E4CFE8C2B} = {544959C5-E349-4E28-A816-D72978273E67}
 		{58E8A4EB-701E-418C-8D20-EF556B205F7D} = {68C8BD1A-58A6-4679-B4A1-3C4B51AE2C63}
 		{6559DF4F-EA93-4C1A-91F4-A1B82B28661C} = {68C8BD1A-58A6-4679-B4A1-3C4B51AE2C63}
+		{E3C0B38E-818D-415B-B96D-C2646C8F3F49} = {68C8BD1A-58A6-4679-B4A1-3C4B51AE2C63}
 		{CB810894-18C3-4546-9FA1-4EB220F905B8} = {CFD8748F-0D1F-4867-BD2E-355D70C7D831}
 		{4616E5BD-B01F-4F46-AA25-D14D3AB31792} = {CFD8748F-0D1F-4867-BD2E-355D70C7D831}
 		{8287320C-A273-4FE8-99B3-F21B9F9457B8} = {832A092C-4AF3-48E4-BD4B-4FF7D1F9713D}
 		{FC30E3C4-CAAB-4950-8D8E-48D39231B7D3} = {832A092C-4AF3-48E4-BD4B-4FF7D1F9713D}
+		{7AA03C85-111E-481A-AEE3-9D6877E9167B} = {CFD8748F-0D1F-4867-BD2E-355D70C7D831}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6EEA1CEB-3382-44D0-B5FF-DCFFA00CF619}

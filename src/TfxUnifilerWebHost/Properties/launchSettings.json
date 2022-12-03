@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "TfxUnifilerWebHost": {
+      "commandName": "Project"
+    }
+  }
+}
