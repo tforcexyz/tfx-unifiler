@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using CommandLine;
 
-namespace Xyz.TForce.Unifiler
+namespace Xyz.TForce.Unifiler.Commands
 {
 
-  public class CommandLineArgs
+  public class SharedCommand : ISharedCommand
   {
 
     [Option("source", HelpText = "Source directory")]
@@ -13,10 +13,10 @@ namespace Xyz.TForce.Unifiler
     [Option("target", HelpText = "Target directory", Required = false)]
     public string TargetDir { get; set; }
 
-    [Option("module", HelpText = "Which tool you want to use which selected files", Required = false, Default = 0)]
-    public int Module { get; set; }
-
     [Value(0)]
     public ICollection<string> Selected { get; set; }
+
+    [Option("debug", Required = false)]
+    public bool IsDebug { get; set; }
   }
 }
