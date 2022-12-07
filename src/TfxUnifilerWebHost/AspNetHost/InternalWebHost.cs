@@ -9,7 +9,7 @@ using Xyz.TForce.Cryptography;
 namespace Xyz.TForce.Unifiler.AspNetHost
 {
 
-  public delegate void WebHostStarted(WebHostStartedEventArgs args);
+  public delegate void WebHostStarted(WebHostStartedEventArguments args);
 
   internal class InternalWebHost
   {
@@ -38,7 +38,7 @@ namespace Xyz.TForce.Unifiler.AspNetHost
       while (!isSuccess && retryCount <= 3);
       if (Started != null && isSuccess)
       {
-        Started(new WebHostStartedEventArgs
+        Started(new WebHostStartedEventArguments
         {
           Port = port,
         });

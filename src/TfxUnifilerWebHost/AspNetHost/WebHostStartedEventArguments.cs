@@ -1,7 +1,7 @@
 namespace Xyz.TForce.Unifiler.AspNetHost
 {
 
-  public class WebHostStartedEventArgs
+  public class WebHostStartedEventArguments
   {
 
     public int Port { get; set; }

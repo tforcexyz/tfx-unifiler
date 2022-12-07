@@ -17,7 +17,7 @@ namespace Xyz.TForce.Unifiler.WinFormHost
       webHost.StartAsync();
     }
 
-    private void WebHost_Started(WebHostStartedEventArgs args)
+    private void WebHost_Started(WebHostStartedEventArguments args)
     {
       chromiumWebBrowser1.Load($"http://localhost:{args.Port}/");
     }

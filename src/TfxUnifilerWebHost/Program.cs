@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using CommandLine;
+using Xyz.TForce.Unifiler.Commands;
 using Xyz.TForce.Unifiler.WinFormHost;
 
 namespace Xyz.TForce.Unifiler
@@ -13,12 +14,12 @@ namespace Xyz.TForce.Unifiler
     [STAThread]
     static void Main(string[] args)
     {
-      _ = Parser.Default.ParseArguments<CommandLineArgs>(args)
-        .WithParsed(Execute)
+      _ = Parser.Default.ParseArguments<GuiCommand>(args)
+        .WithParsed(ExecuteGui)
         .WithNotParsed(Exit);
     }
 
-    private static void Execute(CommandLineArgs args)
+    private static void ExecuteGui(GuiCommand args)
     {
       _ = Application.SetHighDpiMode(HighDpiMode.SystemAware);
       Application.EnableVisualStyles();
