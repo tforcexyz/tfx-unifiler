@@ -6,19 +6,39 @@ using System.Threading.Tasks;
 namespace Xyz.TForce.Unifiler.Interop.ExternalExecutables
 {
 
-  public delegate void ProcessFinished(ProcessFinishedEventArgs ev);
-  public delegate void ProcessStarted(ProcessStartedEventArgs ev);
-
   public class ExecutionController
   {
 
+    public delegate void ProcessFinish(ProcessFinishedEventArgs ev);
+    public delegate void ProcessStart(ProcessStartedEventArgs ev);
+
     private CancellationToken _cancellationToken;
 
-    public event ProcessStarted ProcessStarted;
+    public event ProcessStart ProcessStarted;
 
-    public event ProcessFinished ProcessFinished;
+    public event ProcessFinish ProcessFinished;
 
-    public void StartProcessing(string[] commands)
+    public void Execute(CommandInfo command)
+    {
+      Process process = new Process();
+      process.StartInfo.FileName = command.ExecutablePath;
+      process.StartInfo.Arguments = command.Arguments;
+      process.StartInfo.UseShellExecute = true;
+      Guid processId = Guid.NewGuid();
+      OnProcessStarted(processId);
+      try
+      {
+        _ = process.Start();
+        process.WaitForExit();
+        OnProcessFinished(processId, true, null);
+      }
+      catch (Exception ex)
+      {
+        OnProcessFinished(processId, false, ex);
+      }
+    }
+
+    public void StartAsync(string[] commands)
     {
       _cancellationToken = new CancellationToken();
       StartProcessingParameters parameters = new StartProcessingParameters
@@ -33,7 +53,7 @@ namespace Xyz.TForce.Unifiler.Interop.ExternalExecutables
       foreach (CommandInfo command in parameters.Commands)
       {
         Process process = new Process();
-        process.StartInfo.FileName = command.FilePath;
+        process.StartInfo.FileName = command.ExecutablePath;
         process.StartInfo.Arguments = command.Arguments;
         process.StartInfo.UseShellExecute = true;
         Guid processId = Guid.NewGuid();
