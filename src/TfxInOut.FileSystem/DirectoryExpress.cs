@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -20,7 +21,7 @@ namespace Xyz.TForce.InOut.FileSystem
           results.AddRange(subDirectoryPaths);
         }
       }
-      return results.ToArray();
+      return results.AsArray();
     }
 
     public static string[] GetDirectoriesAndFiles(string path, bool isRecursive = false)
@@ -38,7 +39,7 @@ namespace Xyz.TForce.InOut.FileSystem
       }
       string[] filePaths = Directory.GetFiles(path);
       results.AddRange(filePaths);
-      return results.ToArray();
+      return results.AsArray();
     }
 
     public static string[] GetFiles(string path, bool isRecursive = false)
@@ -55,7 +56,7 @@ namespace Xyz.TForce.InOut.FileSystem
           results.AddRange(subFilePaths);
         }
       }
-      return results.ToArray();
+      return results.AsArray();
     }
 
     public static bool IsRoot(string path)

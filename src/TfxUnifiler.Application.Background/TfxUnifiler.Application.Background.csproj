@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TfxInOut.FileSystem\TfxInOut.FileSystem.csproj" />
     <ProjectReference Include="..\TfxUnifiler.Application\TfxUnifiler.Application.csproj" />
+    <ProjectReference Include="..\TfxUnifiler.Interop.ExternalExecutables\TfxUnifiler.Interop.ExternalExecutables.csproj" />
   </ItemGroup>
 
 </Project>

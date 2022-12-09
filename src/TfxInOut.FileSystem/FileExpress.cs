@@ -94,5 +94,63 @@ namespace Xyz.TForce.InOut.FileSystem
 
       return result;
     }
+
+    public static void SetProperties(string path, SetPropertiesOptions options)
+    {
+      FileInfo fileInfo = new FileInfo(path);
+      FileAttributes newAttributes = fileInfo.Attributes;
+      if (options.Archive.HasValue)
+      {
+        newAttributes = options.Archive == true ? newAttributes | FileAttributes.Archive : newAttributes & ~FileAttributes.Archive;
+      }
+      if (options.Hidden.HasValue)
+      {
+        newAttributes = options.Hidden == true ? newAttributes | FileAttributes.Hidden : newAttributes & ~FileAttributes.Hidden;
+      }
+      if (options.ReadOnly.HasValue)
+      {
+        newAttributes = options.ReadOnly == true ? newAttributes | FileAttributes.ReadOnly : newAttributes & ~FileAttributes.ReadOnly;
+      }
+      if (options.System.HasValue)
+      {
+        newAttributes = options.System == true ? newAttributes | FileAttributes.System : newAttributes & ~FileAttributes.System;
+      }
+      fileInfo.Attributes = newAttributes;
+      if (fileInfo.Attributes.HasFlag(FileAttributes.ReadOnly))
+      {
+        return;
+      }
+      if (newAttributes.HasFlag(FileAttributes.Directory))
+      {
+        DirectoryInfo directoryInfo = new DirectoryInfo(path);
+        if (options.CreatedTime.HasValue)
+        {
+          directoryInfo.CreationTimeUtc = options.CreatedTime.Value;
+        }
+        if (options.AccessedTime.HasValue)
+        {
+          directoryInfo.LastAccessTimeUtc = options.AccessedTime.Value;
+        }
+        if (options.ModifiedTime.HasValue)
+        {
+          directoryInfo.LastWriteTimeUtc = options.ModifiedTime.Value;
+        }
+      }
+      else
+      {
+        if (options.CreatedTime.HasValue)
+        {
+          fileInfo.CreationTimeUtc = options.CreatedTime.Value;
+        }
+        if (options.AccessedTime.HasValue)
+        {
+          fileInfo.LastAccessTimeUtc = options.AccessedTime.Value;
+        }
+        if (options.ModifiedTime.HasValue)
+        {
+          fileInfo.LastWriteTimeUtc = options.ModifiedTime.Value;
+        }
+      }
+    }
   }
 }

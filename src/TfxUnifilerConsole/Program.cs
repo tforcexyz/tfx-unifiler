@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using CommandLine;
 using Xyz.TForce.Unifiler.Commands;
 
@@ -11,7 +12,7 @@ namespace Xyz.TForce.Unifiler
 
     static void Main(string[] args)
     {
-      Console.WriteLine($"TFX UNIFILER v1.0.0.20221224");
+      Console.WriteLine($"TFX UNIFILER v1.0.0.20221231");
       Console.WriteLine("");
 
       _ = Parser.Default.ParseArguments<HashCommand, PackCommand>(args)
@@ -20,12 +21,17 @@ namespace Xyz.TForce.Unifiler
         .WithNotParsed(Exit);
     }
 
-    private static void ExecutePack(PackCommand args)
+    private static void Exit(IEnumerable<Error> errors)
     {
     }
 
-    private static void Exit(IEnumerable<Error> errors)
+    private static string TrimTrailingPath(string path)
     {
+      if (path == null)
+      {
+        return null;
+      }
+      return path.TrimEnd(Path.DirectorySeparatorChar);
     }
   }
 }

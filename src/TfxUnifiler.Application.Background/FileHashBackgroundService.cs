@@ -4,6 +4,7 @@ using System.IO;
 using System.Threading;
 using Xyz.TForce.InOut.FileSystem;
 using Xyz.TForce.Unifiler.Application.Models;
+using static Xyz.TForce.Unifiler.Application.IFileHashBackgroundService;
 
 namespace Xyz.TForce.Unifiler.Application.Background
 {
@@ -80,7 +81,7 @@ namespace Xyz.TForce.Unifiler.Application.Background
         OnFileHashFinished(processId, filePath, result);
       }
 
-      OnProcessFinished(processId, results.ToArray());
+      OnProcessFinished(processId, results.AsArray());
     }
 
     protected void OnProcessStarted(Guid processId)

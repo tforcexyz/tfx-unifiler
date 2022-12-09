@@ -8,7 +8,7 @@ namespace Xyz.TForce.Unifiler.Commands
   public class HashCommand : SharedCommand
   {
 
-    [Option("algorithm", Required = true, Separator = ',')]
+    [Option("algorithm", Separator = ',')]
     public IEnumerable<string> Algorithms { get; set; }
   }
 }
