@@ -36,22 +36,29 @@ namespace Xyz.TForce.Unifiler
 
       Console.WriteLine("");
       Console.WriteLine("Overrive options");
-      Console.WriteLine("    1- MoveToArchive");
-      Console.WriteLine("    2- SeparateInput");
-      Console.WriteLine("    3- NormalizeProperties");
-      Console.Write("Enter: ");
+      Console.WriteLine("    1- ChangeDestinationToSource");
+      Console.WriteLine("    2- MoveToArchive");
+      Console.WriteLine("    3- SeparateInput");
+      Console.WriteLine("    4- NormalizeProperties");
+      Console.Write("Enter your choice: ");
 
       string overrideCode = Console.ReadLine();
+      Console.WriteLine("--------");
+
       IList<char> charCodes = overrideCode.ToCharArray().ToList();
       if (charCodes.Contains('1'))
       {
-        command.MoveToArchive = !command.MoveToArchive;
+        command.TargetDir = command.SourceDir;
       }
       if (charCodes.Contains('2'))
       {
-        command.SeparateInput = !command.SeparateInput;
+        command.MoveToArchive = !command.MoveToArchive;
       }
       if (charCodes.Contains('3'))
+      {
+        command.SeparateInput = !command.SeparateInput;
+      }
+      if (charCodes.Contains('4'))
       {
         command.NormalizeProperties = !command.NormalizeProperties;
       }
