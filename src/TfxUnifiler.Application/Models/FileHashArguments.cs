@@ -6,6 +6,8 @@ namespace Xyz.TForce.Unifiler.Application.Models
 
     public string[] TargetPaths { get; set; }
 
+    public bool SeparateInput { get; set; }
+
     public bool IncludeCrc32 { get; set; }
 
     public bool IncludeMd5 { get; set; }

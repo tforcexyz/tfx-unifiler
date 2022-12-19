@@ -10,5 +10,8 @@ namespace Xyz.TForce.Unifiler.Commands
 
     [Option("algorithm", Separator = ',')]
     public IEnumerable<string> Algorithms { get; set; }
+
+    [Option("separate")]
+    public bool SeparateInput { get; set; }
   }
 }

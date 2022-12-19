@@ -20,22 +20,25 @@ namespace Xyz.TForce.Unifiler
     {
       command.SourceDir = TrimTrailingPath(command.SourceDir);
       command.TargetDir = TrimTrailingPath(command.TargetDir);
+
+      Console.WriteLine($"Debug Mode{Environment.NewLine}----------");
+      Console.WriteLine($"Command: hash");
+      Console.WriteLine($"Source path: {command.SourceDir}");
+      Console.WriteLine($"Selected items:");
+      foreach (string targetPath in command.Selected)
+      {
+        Console.WriteLine($"    {targetPath}");
+      }
+      Console.WriteLine($"Separate inputs: {command.SeparateInput}");
+      Console.WriteLine($"Hash algorithms:");
+      foreach (string algorithm in command.Algorithms)
+      {
+        Console.WriteLine($"    {algorithm}");
+      }
+      Console.WriteLine($"Target path: {command.TargetDir}");
+
       if (command.IsDebug)
       {
-        Console.WriteLine($"Debug Mode{Environment.NewLine}----------");
-        Console.WriteLine($"Command: hash");
-        Console.WriteLine($"Source path: {command.SourceDir}");
-        Console.WriteLine($"Selected items:");
-        foreach (string targetPath in command.Selected)
-        {
-          Console.WriteLine($"    {targetPath}");
-        }
-        Console.WriteLine($"Hash algorithms:");
-        foreach (string algorithm in command.Algorithms)
-        {
-          Console.WriteLine($"    {algorithm}");
-        }
-        Console.WriteLine($"Target path: {command.TargetDir}");
         Console.ReadLine();
         return;
       }
@@ -50,6 +53,7 @@ namespace Xyz.TForce.Unifiler
       Guid processId = fileHashService.StartAsync(new FileHashArguments
       {
         TargetPaths = command.Selected.AsArray(),
+        SeparateInput = command.SeparateInput,
         IncludeCrc32 = command.Algorithms.Contains("crc32"),
         IncludeMd5 = command.Algorithms.Contains("md5"),
         IncludeSha1 = command.Algorithms.Contains("sha1"),
@@ -61,23 +65,69 @@ namespace Xyz.TForce.Unifiler
 
     private static void FileHashService_FileHashStarted(Guid processId, string filePath, long fileSize)
     {
-      Console.WriteLine($"Processing {filePath}... {fileSize}");
+      Console.WriteLine($"Processing {filePath}... {fileSize.ToString("N0")}");
     }
 
     private static void FileHashService_ProcessFinished(Guid processId, Application.Models.FileHashes[] allHashes)
     {
       HashCommand command = _hashCommands[processId];
-      string parentDirectory = Coalesce(command.TargetDir, Environment.CurrentDirectory);
-      bool isRoot = DirectoryExpress.IsRoot(parentDirectory);
-      string fileName = isRoot ? "[Checksum]" : $"[{Path.GetFileName(parentDirectory)}]";
-      string[] fileRelativePaths = allHashes.Select(hash =>
-        {
-          string relativePath = GetRelativePath(hash.FilePath, parentDirectory);
-          return relativePath;
-        })
-        .AsArray();
-      IFileFormatter formatter = new FileFormatter();
+      
 
+      if (command.SeparateInput)
+      {
+        foreach (string selected in command.Selected)
+        {
+          string inputPath = selected.TrimEnd(Path.DirectorySeparatorChar);
+          bool isDirectory = Directory.Exists(inputPath);
+          if (isDirectory)
+          {
+            bool isRoot = DirectoryExpress.IsRoot(inputPath);
+            string fileName = isRoot ? "[Checksum]" : $"[{Path.GetFileName(inputPath)}]";
+            Application.Models.FileHashes[] filteredHashes = allHashes
+              .Where(hash => { return hash.FilePath.StartsWith(inputPath); })
+              .ToArray();
+            string[] fileRelativePaths = filteredHashes.Select(hash =>
+              {
+                string relativePath = GetRelativePath(hash.FilePath, inputPath);
+                return relativePath;
+              })
+              .AsArray();
+            WriteToFiles(command, fileRelativePaths, filteredHashes, inputPath, fileName);
+            continue;
+          }
+          bool isFile = File.Exists(inputPath);
+          if (isFile)
+          {
+            string parentDirectory = Path.GetDirectoryName(inputPath);
+            string fullFileName = Path.GetFileName(inputPath);
+            Application.Models.FileHashes[] filteredHashes = allHashes.Where(hash => { return hash.FilePath == inputPath; })
+              .ToArray();
+            string[] fileRelativePaths = new string[1]
+            {
+              inputPath,
+            };
+            WriteToFiles(command, fileRelativePaths, filteredHashes, inputPath, fullFileName);
+          }
+        }
+      }
+      else
+      {
+        string parentDirectory = Coalesce(command.TargetDir, Environment.CurrentDirectory);
+        bool isRoot = DirectoryExpress.IsRoot(parentDirectory);
+        string fileName = isRoot ? "[Checksum]" : $"[{Path.GetFileName(parentDirectory)}]";
+        string[] fileRelativePaths = allHashes.Select(hash =>
+          {
+            string relativePath = GetRelativePath(hash.FilePath, parentDirectory);
+            return relativePath;
+          })
+          .AsArray();
+        WriteToFiles(command, fileRelativePaths, allHashes, parentDirectory, fileName);
+      }
+    }
+
+    private static void WriteToFiles(HashCommand command, string[] fileRelativePaths, Application.Models.FileHashes[] allHashes, string parentDirectory, string fileName)
+    {
+      IFileFormatter formatter = new FileFormatter();
       if (command.Algorithms.Contains("crc32"))
       {
         string content = formatter.CreateSfvFile(new CreateSfvFileArguments

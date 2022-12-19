@@ -40,6 +40,7 @@ namespace Xyz.TForce.Unifiler
       Console.WriteLine("    2- MoveToArchive");
       Console.WriteLine("    3- SeparateInput");
       Console.WriteLine("    4- NormalizeProperties");
+      Console.WriteLine("    5- SolidMode");
       Console.Write("Enter your choice: ");
 
       string overrideCode = Console.ReadLine();
@@ -61,6 +62,10 @@ namespace Xyz.TForce.Unifiler
       if (charCodes.Contains('4'))
       {
         command.NormalizeProperties = !command.NormalizeProperties;
+      }
+      if (charCodes.Contains('5'))
+      {
+        command.SolidBlockSize = command.SolidBlockSize.HasValue ? null: 0;
       }
 
       IFilePackBackgroundService filePackService = new FilePackBackgroundService();
